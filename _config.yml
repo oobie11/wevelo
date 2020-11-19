@@ -39,6 +39,25 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+prose:
+  siteurl: "https://new.wevelo.com"
+  media: "assets/images"
+  metadata:
+  _posts:
+    - name: "title"
+      field:
+        element: "text"
+        label: "title"
+    - name: "category"
+      field:
+        element: "select"
+        label: "category"
+        options:
+          - name: 'People'
+            value: 'people'
+          - name: 'Dogs'
+            value: 'dogs'
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
