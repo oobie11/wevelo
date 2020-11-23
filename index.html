@@ -164,58 +164,37 @@ layout: default
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="name">First Name:</label>
-								<input type="text" name="first_name" class="form-control input-lg" placeholder="Your first name" />
+								<input type="text" id="first_name" name="first_name" class="form-control input-lg" placeholder="Your first name" />
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="name">Last Name:</label>
-								<input type="text" name="last_name" class="form-control input-lg" placeholder="Your last name" />
+								<input type="text" id="last_name" name="last_name" class="form-control input-lg" placeholder="Your last name" />
 							</div>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-6">
 							<label for="email">Email:</label>
-							<input type="text" name="email" class="form-control input-lg" placeholder="Your email" />
+							<input type="text" id="email" name="email" class="form-control input-lg" placeholder="Your email" />
 						</div>
 						<div class="col-md-6">
 							<label for="phone">Phone:</label>
-							<input type="text" name="phone" class="form-control input-lg" placeholder="Your phone number" />
+							<input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="Your phone number" />
 						</div>
 					</div>
-					<!-- <div class="form-group row">
-						<div class="col-md-6">
-							<label for="timeline">Timeline:</label>
-							<input type="text" name="timeline" class="form-control input-lg" placeholder="Your ideal timeline" />
-						</div>
-						<div class="col-md-6">
-							<label for="budget">Budget</label>
-							<select class="form-control" name="budget" id="budget">
-								<option selected>Choose...</option>
-								<option value="25000+">$20,000+</option>
-								<option value="15000/25000">$10,000 - $20,000</option>
-								<option value="5000/10000">$5,000 - $10,000</option>
-								<option value="2500/5000">$2,500 - $5,000</option>
-							</select>
-						</div>
-					</div> -->
 					<div class="row">
 						<div class="col-md-12">
 							<div class="form-group">	
 								<label for="description">Project Description:</label>
-								<textarea name="description" class="form-control" rows="5" placeholder="Let us know a description of your project needs..."></textarea>
-							</div>
-							<div class="d-none">
-								<label for ="occupation">DO NOT FILL IN THIS FIELD (SPAM PREVENTION)</label>
-								<input type="text" name="occupation" placeholder="Enter your occupation" />
+								<textarea id="description" name="description" class="form-control" rows="5" placeholder="Let us know a description of your project needs..."></textarea>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 offset-md-4">
 						<div class="form-group">
-							<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-							<input type="submit" name="submit" class="btn btn-lg btn-purple btn-block" value="Send!">
+							<input type="submit" name="submit" class="btn btn-lg btn-purple btn-block" value="Send!" onclick="sendEmail()">
 						</div>
 					</div>
 				</form>

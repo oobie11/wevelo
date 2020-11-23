@@ -28,15 +28,6 @@
 
         gtag('config', 'UA-68074416-4');
       </script>
-      <script src="https://www.google.com/recaptcha/api.js?render=6Ld5oOIUAAAAAOJzrd6mK49hOVVeBTi7EhsW2fxT"></script>
-      <script>
-          grecaptcha.ready(function () {
-              grecaptcha.execute('6Ld5oOIUAAAAAOJzrd6mK49hOVVeBTi7EhsW2fxT', { action: 'contact' }).then(function (token) {
-                  var recaptchaResponse = document.getElementById('recaptchaResponse');
-                  recaptchaResponse.value = token;
-              });
-          });
-      </script>
       {% endif %}
   </head>
   <body>
