@@ -22,7 +22,7 @@ title: Wevelo
 tagline: Web Design & Digital Marketing
 email: hello@wevelo.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello World Im here
+  Wevelo is a web design & digital marking studio, based in Fort Collins, CO and specializing in simple, hand crafted business websites and social media management. Call (970) 430-6029 and see how we can help.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://wevelo.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: wevelo
@@ -40,7 +40,7 @@ plugins:
   - jekyll-seo-tag
 
 prose:
-  siteurl: "https://new.wevelo.com"
+  siteurl: "https://wevelo.com"
   media: "assets/images"
   metadata:
   _posts:
