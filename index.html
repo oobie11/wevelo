@@ -200,31 +200,10 @@ layout: default
 					</div>
 				</form>
 				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-                <script type="text/javascript">var submitted=false;</script>
-                <script type="text/javascript">
-                    function validateEmail($email) {
-                      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-                      return emailReg.test( $email );
-                    }
+				<script type="text/javascript">var submitted=false;</script>
 
-                    $('#contact_form #send-email').on('click', function(e) {
-                    	event.preventDefault();
-                    	var emailField = $('#contact_form .email').val();
-
-                        if( !emailField || !validateEmail(emailField) ) { 
-                            alert("Sorry, your email is invalid");
-                        } else {
-	                        if(!$(".contact-title").val()) {
-	                        	$("#contact_form").attr('action', 'https://docs.google.com/forms/d/e/1FAIpQLSdyJNaAJ0amP7waShlWpWOimZLAcyyagGzba_6__r9kgkGAQQ/formResponse?');	
-	                            $("#contact_form").submit();
-	                            $('.alert-success').removeClass('d-none');
-	                            $('#contact_form input[type=text]').val("");
-	                        } else {
-	                        	alert("Sorry, A problem has occured.");
-	                        }
-                        }
-                    });
-                </script>
+                {% include form-validation.html %}
+                
                 <div class="d-none alert alert-success mt-4" role="alert">
                   <h4 class="alert-heading">Thank you!</h4>
                   <p>Thank you for contacting us! We will be in touch shortly :).</p>

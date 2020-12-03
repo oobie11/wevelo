@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    var formAction = "https://docs.google.com/forms/d/e/1FAIpQLSdyJNaAJ0amP7waShlWpWOimZLAcyyagGzba_6__r9kgkGAQQ/formResponse?";
+    $( "#contact_form #send-email" ).hover(function() {
+          $("#contact_form").attr('action', formAction);
+        });
+    
+    function validateEmail($email) {
+      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      return emailReg.test( $email );
+    }
+
+    $('#contact_form #send-email').on('click', function(e) {
+    	event.preventDefault();
+    	var emailField = $('#contact_form .email').val();
+
+        if( !emailField || !validateEmail(emailField) ) { 
+            alert("Sorry, your email is invalid");
+        } else {
+            if(!$(".contact-title").val()) {	
+                $("#contact_form").submit();
+                $('.alert-success').removeClass('d-none');
+                $('#contact_form input[type=text]').val("");
+            } else {
+            	alert("Sorry, A problem has occured.");
+            }
+        }
+    });
+</script>
