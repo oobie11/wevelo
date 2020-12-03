@@ -182,7 +182,7 @@ layout: default
 						<div class="col-md-6">
 							<label for="phone">Phone:</label>
 							<input type="text" id="entry.664161729" name="entry.664161729" class="form-control input-lg" placeholder="Your phone number" />
-							<input type="text" id="title" name="title" class="form-control input-lg d-none" placeholder="Your title" />
+							<input type="text" id="entry.252059028" name="entry.252059028" class="contact-title form-control input-lg" placeholder="Your title" />
 						</div>
 					</div>
 					<div class="row">
@@ -211,15 +211,15 @@ layout: default
                     	event.preventDefault();
                     	var emailField = $('#contact_form .email').val();
 
-                        if( emailField == "" || !validateEmail(emailField) ) { 
+                        if( !emailField || !validateEmail(emailField) ) { 
                             alert("Sorry, your email is invalid");
                         } else {
-	                        if($("#title").val() == "") {	
+	                        if(!$(".contact-title").val()) {	
 	                            $("#contact_form").submit();
 	                            $('.alert-success').removeClass('d-none');
 	                            $('#contact_form input[type=text]').val("");
 	                        } else {
-	                        	window.location.replace("{% link index.html %}");
+	                        	alert("Sorry, A problem has occured.");
 	                        }
                         }
                     });
